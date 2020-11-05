@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Главная</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&family=Roboto:wght@100;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&family=Roboto:wght@100;400;500;700;900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -25,9 +25,15 @@
               <span class="logo">Web</span><span class="logo-end">Studio</span>
               </a>
           </li>
-          <li class="header-list"><a class="navigation current" href="./index.html">Студия</a></li>
-          <li class="header-list"><a class="navigation" href="./portfolio.html">Портфолио</a></li>
-          <li class="header-list"><a class="navigation" href="">Контакты</a></li>
+          <li class="header-list">
+            <a class="navigation current" href="./index.html">Студия</a>
+          </li>
+          <li class="header-list">
+            <a class="navigation" href="./portfolio.html">Портфолио</a>
+          </li>
+          <li class="header-list">
+            <a class="navigation" href="">Контакты</a>
+          </li>
         </ul>
       </nav>
 
@@ -58,8 +64,14 @@
       <!-- Hero -->
       <section class="hero">
         <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-        <a class="order-link" href="">Заказать услугу</a>
+        <button class="order-link" type="button" data-modal-open>Заказать услугу</button>
       </section>
+
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <button class="modal-close" data-modal-close>X</button>
+          </div>
+        </div>
 
       <!-- Advantages -->
       <section class="advantages">
@@ -126,14 +138,23 @@
       
         <ul class="work-examples">
           <li>
+            <div class="work-examples-overlay">
             <img src="./images/desktop.jpg" alt="Рабочий Стол" width="370" />
+              <p class="work-examples-descriptions">Десктопные приложения</p>
+            </div>
           </li>
           <li>
-            <img src="./images/phone-note.jpg" alt="Телефон перед ноутбуком" width="370" />
+            <div class="work-examples-overlay">
+              <img src="./images/phone-note.jpg" alt="Телефон перед ноутбуком" width="370" />
+              <p class="work-examples-descriptions">Мобильные приложения</p>
+            </div>
           </li>
           <li>
-            <img src="./images/grahical-tablet.jpg" alt="Графический планшет" width="370" />
-          </li>
+            <div class="work-examples-overlay">
+              <img src="./images/grahical-tablet.jpg" alt="Графический планшет" width="370" />
+              <p class="work-examples-descriptions">Дизайнерские решения</p>
+            </div>
+                      </li>
         </ul>
         </div>
       </section>
@@ -351,5 +372,6 @@
       </div>
     
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
